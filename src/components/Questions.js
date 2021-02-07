@@ -4,7 +4,6 @@ import Result from './Result'
 import '../styles/Questions.css'
 
 
-
 const pages = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 class Questions extends React.Component {
@@ -85,9 +84,8 @@ class Questions extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("현재 점수는 ", this.state)
+    //console.log("현재 점수는 ", this.state)
   }
-
 
   render() {
 
@@ -98,17 +96,17 @@ class Questions extends React.Component {
         return q.no == this.state.number && <div className="container" key={idx}>
           <div style={{ height: 180 }}>
             <div className="page_container">
-              <div className="move__pages">
+              {/* <div className="move__pages">
                 <img onClick={() => this.changeStep(-1)} src={"/images/back.png"} />
-              </div>
+              </div> */}
               <div className="page">
                 {pages.map((page, index) => {
                   return <div className={this.state.number == index ? "page__cur" : "page__each"}></div>
                 })}
               </div>
-              <div className="move__pages">  
+              {/* <div className="move__pages">  
                 <img onClick={() => this.changeStep(1)} src={"/images/right.png"} />
-              </div>
+              </div> */}
             </div>
             <h1 className="question" >{q.q}</h1>
           </div>
@@ -118,7 +116,7 @@ class Questions extends React.Component {
           </section>
         </div>
       })}
-    </div> : <Result userName={this.props.userName} points={{
+    </div> : <Result resetName={this.props.resetName} userName={this.props.userName} points={{
       e, s, t, j
     }} />
   }

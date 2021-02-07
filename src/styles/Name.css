@@ -5,14 +5,14 @@
 
 .Name_container {
   background-color: white;
-  height: 800px;
+  height: 650px;
   text-align: center;
-  padding-top: 300px;
+  padding-top: 250px;
 }
 
 .title {
-  color: #4682b4;
-  font-family: 'SDSamliphopangche_Outline';
+  color: steelblue;
+  font-family: 'SDSamliphopangche_Basic';
   font-size: 60px;
 }
 
@@ -42,10 +42,11 @@
   border-radius: 10px;
   border: none;
   box-shadow: 1px 1px 3px darkgray;
+  margin-top: 10px;
 }
 
 .start:hover{
-  background-color: #3f98fd;
+  background-color: lightsteelblue;
   font-size: 20px;
 }
 
@@ -54,8 +55,8 @@
 }
 
 @font-face {
-  font-family: 'SDSamliphopangche_Outline';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Outline.woff') format('woff');
+  font-family: 'SDSamliphopangche_Basic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/SDSamliphopangche_Basic.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -65,4 +66,29 @@
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGB.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+}
+
+@media (max-width:450px){
+  .Name_container {
+    background-color: white;
+    height: 800px;
+    text-align: center;
+    padding-top: 180px;
+  }
+
+  .name{
+    box-shadow: 1px 1px 3px darkgray;  
+  }
+
+  .question {
+      font-family: 'Yuto';
+      color: black;
+      width: 350px;
+      margin: 0 auto;
+  }
+
+  .btn__container{
+      width: 350px;
+      height: 500px;   
+  }
 }

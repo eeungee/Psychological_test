@@ -2,7 +2,6 @@ import React from 'react';
 import { myAnsw } from '../myAnsw';
 import '../styles/Result.css'
 
-
 class Result extends React.Component{
 
     constructor(props){
@@ -41,9 +40,10 @@ class Result extends React.Component{
             <img />
             <p className="character">{this.state.result}</p>
             <p className="you">{this.props.userName} <br /><br /> 
-            <span className="user_type">당신과 가장 잘 어울리는 차는</span>  {this.state.you} !</p>
-            <div className="type"><p>성격특징</p>{this.state.descrip}</div>
-            <div className="effect"><p>효능</p>{this.state.effect}</div>
+            <span className="user_type">가장 잘 어울리는 차는</span> {this.state.you} !</p>
+            <div className="type"><p className="type_title">성격특징</p>{this.state.descrip}</div>
+            <div className="type"><p className="type_title">효능</p>{this.state.effect}</div>
+            <button onClick={this.props.resetName}>다시하기</button>
         </div>
     }
 }

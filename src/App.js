@@ -19,10 +19,15 @@ class App extends React.Component{
       userName: name
     })
   }
-
+  resetName = () => {
+    this.setState({
+      isThereName: false,
+      userName: ''
+    })
+  }
   render(){
     return <div>
-      {this.state.isThereName ? <Questions userName={this.state.userName} /> :
+      {this.state.isThereName ? <Questions resetName={this.resetName} userName={this.state.userName} /> :
       <Name setName={this.setName} />}
     </div>
   }
